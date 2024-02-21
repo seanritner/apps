@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rathbun Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <main id="container">
+        <header>
+            <h2>&#128031; <span class="title">Extender Calculator V3 &#128031;</span></h2>
+            <h5>Version 3 Notes:</h5>
+            <ul>
+                <li class="small">Concentration (M) is now calcuated on the base value for Densimeter Reading</li>
+            </ul>
+        </header>
+        <hr>
+        <section>
+            <h3>Input Data:</h3>
+            <form id="inputForm">
+                <div class="input-group">
+                    <label for="densimeter">Concentration (M):</label>
+                    <input class="box" type="text" id="densimeter" placeholder="Base Value" name="densimeter" pattern="[0-9]*\.[0-9]*" required >
+                </div>
+                <div class="input-group">
+                    <label for="volume">Volume (mL):</label>
+                    <input class="box" type="text" id="volume" name="volume" pattern="[0-9]*\.[0-9]*" required >
+                </div>
+                <button id="calculateButton" type="button">Calculate</button>
+            </form>
+        </section>
+        <hr>
+        <section>
+            <h3>Results:</h3>
+            <form id="resultsForm">
+                <div class="input-group">
+                    <label for="concentrationInital">Concentration Inital (x10<sup>10</sup>):</label>
+                    <input class="box" type="text" id="concentrationInital" name="concentrationInital" readonly>
+                </div>
+                <div class="input-group">
+                    <label for="volumeFinal">Volume Final (mL):</label>
+                    <input class="box" type="text" id="volumeFinal" name="volumeFinal" readonly>
+                </div>
+                <div class="input-group">
+                    <label for="volumeAdded">Rathbun Added Extender (mL):</label>
+                    <input class="box" type="text" id="volumeAdded" name="volumeAdded" readonly>
+                </div>
+                <div class="input-group">
+                    <label for="concentrationFinal">Concentration Final (x10<sup>10</sup>):</label>
+                    <input class="box" type="text" id="concentrationFinal" name="concentrationFinal" readonly>
+                </div>
+                <button id="reset-button" type="button" class="resetForm">Clear</button>
+            </form>
+        </section>
+    </main>
+    <script src="improvedCalc.js" defer></script>
+</body>
+</html>
